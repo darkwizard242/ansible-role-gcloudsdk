@@ -23,7 +23,7 @@
     filename: "{{ gcloudsdk_repo_debian_filename }}"
     codename: "{{ ansible_lsb['codename'] }}"
     update_cache: yes
-  when: ansible_architecture != 'x86_64'
+  # when: ansible_architecture != 'x86_64'
 # - name: Adding repository {{ gcloudsdk_repo_debian_when_x86_64 }} on Debian based systems.
 #   apt_repository:
 #     repo: "{{ gcloudsdk_repo_debian_when_x86_64 }}"

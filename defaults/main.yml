@@ -18,6 +18,7 @@ gcloudsdk_repo_el_name: google-cloud-sdk
 gcloudsdk_repo_el_description: Google Cloud SDK
 gcloudsdk_repo_el: https://packages.cloud.google.com/yum/repos/cloud-sdk-el7-x86_64
 gcloudsdk_repo_el_filename: "{{ gcloudsdk_app_name }}"
+gcloudsdk_repo_el_repogpgcheck: yes
 gcloudsdk_repo_el_gpgcheck: yes
 gcloudsdk_repo_el_enabled: yes
 gcloudsdk_repo_desired_state: present

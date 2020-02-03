@@ -1,0 +1,23 @@
+---
+# defaults file for gcloudsdk
+
+gcloudsdk_pre_reqs_debian:
+  - apt-transport-https
+  - ca-certificates
+  - lsb-release
+  - gnupg
+gcloudsdk_pre_reqs_debian_desired_state: present
+gcloudsdk_app_name: google-cloud-sdk
+gcloudsdk_desired_state: present
+gcloudsdk_debian_gpg_key: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+gcloudsdk_repo_debian: "deb http://packages.cloud.google.com/apt {{ ansible_lsb['codename'] }} main"
+# gcloudsdk_repo_debian_when_x86_64: "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ {{ ansible_lsb['codename'] }} main"
+gcloudsdk_repo_debian_filename: "{{ gcloudsdk_app_name }}"
+gcloudsdk_el_gpg_key: https://packages.cloud.google.com/yum/doc/yum-key.gpg
+gcloudsdk_repo_el_name: google-cloud-sdk
+gcloudsdk_repo_el_description: Google Cloud SDK
+gcloudsdk_repo_el: https://packages.cloud.google.com/yum/repos/cloud-sdk-el7-x86_64
+gcloudsdk_repo_el_filename: "{{ gcloudsdk_app_name }}"
+gcloudsdk_repo_el_gpgcheck: yes
+gcloudsdk_repo_el_enabled: yes
+gcloudsdk_repo_desired_state: present

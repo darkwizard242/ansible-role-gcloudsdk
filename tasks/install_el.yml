@@ -8,7 +8,9 @@
     baseurl: "{{ gcloudsdk_repo_el }}"
     gpgcheck: "{{ gcloudsdk_repo_el_gpgcheck }}"
     repo_gpgcheck: "{{ gcloudsdk_repo_el_repogpgcheck }}"
-    gpgkey: "{{ gcloudsdk_el_gpg_key }}"
+    gpgkey:
+      - "{{ gcloudsdk_el_gpg_yum_key }}"
+      - "{{ gcloudsdk_el_gpg_rpm_key }}"
     enabled: "{{ gcloudsdk_repo_el_enabled }}"
     file: "{{ gcloudsdk_repo_el_filename }}"
     state: "{{ gcloudsdk_repo_desired_state }}"

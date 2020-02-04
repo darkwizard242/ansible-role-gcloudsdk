@@ -13,10 +13,12 @@ gcloudsdk_debian_gpg_key: https://packages.cloud.google.com/apt/doc/apt-key.gpg
 gcloudsdk_repo_debian: "deb https://packages.cloud.google.com/apt cloud-sdk main"
 # gcloudsdk_repo_debian_when_x86_64: "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ {{ ansible_lsb['codename'] }} main"
 gcloudsdk_repo_debian_filename: "{{ gcloudsdk_app_name }}"
-gcloudsdk_el_gpg_key: https://packages.cloud.google.com/yum/doc/yum-key.gpg
+gcloudsdk_el_gpg_yum_key: https://packages.cloud.google.com/yum/doc/yum-key.gpg
+gcloudsdk_el_gpg_rpm_key: https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
 gcloudsdk_repo_el_name: google-cloud-sdk
 gcloudsdk_repo_el_description: Google Cloud SDK
 gcloudsdk_repo_el: https://packages.cloud.google.com/yum/repos/cloud-sdk-el7-x86_64
+
 gcloudsdk_repo_el_filename: "{{ gcloudsdk_app_name }}"
 gcloudsdk_repo_el_repogpgcheck: yes
 gcloudsdk_repo_el_gpgcheck: yes

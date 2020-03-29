@@ -2,7 +2,7 @@
 
 # Ansible Role: gcloudsdk
 
-Role to install (_by default_) `google-cloud-sdk` package for Debian based and EL based systems or uninstall (_if passed as var_) on **Debian** based and **EL** based systems.
+Role to install (_by default_) [google-cloud-sdk](https://cloud.google.com/sdk) package for Debian based and EL based systems or uninstall (_if passed as var_) on **Debian** based and **EL** based systems.
 
 ## Requirements
 
@@ -71,7 +71,7 @@ For default behaviour of role (i.e. installation of **google-cloud-sdk** package
 ```yaml
 - hosts: servers
   roles:
-    - role: darkwizard242.gcloudsdk
+    - darkwizard242.gcloudsdk
 ```
 
 For customizing behavior of role (i.e. installation of latest **google-cloud-sdk** package) in ansible playbooks.
@@ -79,9 +79,9 @@ For customizing behavior of role (i.e. installation of latest **google-cloud-sdk
 ```yaml
 - hosts: servers
   roles:
-    - role: darkwizard242.gcloudsdk
-      vars:
-        gcloudsdk_desired_state: latest
+    - darkwizard242.gcloudsdk
+  vars:
+    gcloudsdk_desired_state: latest
 ```
 
 For customizing behavior of role (i.e. un-installation of **google-cloud-sdk** package) in ansible playbooks.
@@ -89,9 +89,9 @@ For customizing behavior of role (i.e. un-installation of **google-cloud-sdk** p
 ```yaml
 - hosts: servers
   roles:
-    - role: darkwizard242.gcloudsdk
-      vars:
-        gcloudsdk_desired_state: absent
+    - darkwizard242.gcloudsdk
+  vars:
+    gcloudsdk_desired_state: absent
 ```
 
 ## License

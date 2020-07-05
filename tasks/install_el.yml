@@ -1,7 +1,7 @@
 ---
-# tasks file for gcloudsdk - EL
+# tasks file for gcloudsdk | EL Family
 
-- name: Adding repository {{ gcloudsdk_repo_el }} on EL based systems.
+- name: EL Family | Adding repository {{ gcloudsdk_repo_el }}
   yum_repository:
     name: "{{ gcloudsdk_repo_el_name }}"
     description: "{{ gcloudsdk_repo_el_description }}"
@@ -14,7 +14,8 @@
     enabled: "{{ gcloudsdk_repo_el_enabled }}"
     file: "{{ gcloudsdk_repo_el_filename }}"
     state: "{{ gcloudsdk_repo_desired_state }}"
-- name: Installing {{ gcloudsdk_app_name }} on EL based systems.
+
+- name: EL Family | Installing {{ gcloudsdk_app_name }}
   yum:
     name: "{{ gcloudsdk_app_name }}"
     state: "{{ gcloudsdk_desired_state }}"

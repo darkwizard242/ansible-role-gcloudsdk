@@ -1,29 +1,33 @@
 ---
-# tasks file for gcloudsdk - Debian/Ubuntu
+# tasks file for gcloudsdk | Debian/Ubuntu Family
 
-- name: Install python3-apt on Debian based systems.
+- name: Debian/Ubuntu Family | Install python3-apt
   apt:
     name: python3-apt
     state: present
     force_apt_get: yes
     update_cache: yes
-- name: Installing {{ gcloudsdk_pre_reqs_debian }} on Debian based systems for {{ gcloudsdk_app_name }} .
+
+- name: Debian/Ubuntu Family | Installing {{ gcloudsdk_pre_reqs_debian }} for {{ gcloudsdk_app_name }}
   apt:
     name: "{{ gcloudsdk_pre_reqs_debian }}"
     state: "{{ gcloudsdk_pre_reqs_debian_desired_state }}"
     force_apt_get: yes
-- name: Add gpg signing key for {{ gcloudsdk_app_name }} .
+
+- name: Debian/Ubuntu Family | Add gpg signing key for {{ gcloudsdk_app_name }} .
   apt_key:
     url: "{{ gcloudsdk_debian_gpg_key }}"
     state: present
-- name: Adding repository {{ gcloudsdk_repo_debian }} on Debian based systems.
+
+- name: Debian/Ubuntu Family | Adding repository {{ gcloudsdk_repo_debian }}
   apt_repository:
     repo: "{{ gcloudsdk_repo_debian }}"
     state: "{{ gcloudsdk_repo_desired_state }}"
     filename: "{{ gcloudsdk_repo_debian_filename }}"
     codename: "{{ ansible_lsb['codename'] }}"
     update_cache: yes
-- name: Installing {{ gcloudsdk_app_name }} on Debian based systems.
+
+- name: Debian/Ubuntu Family | Installing {{ gcloudsdk_app_name }}
   apt:
     name: "{{ gcloudsdk_app_name }}"
     state: "{{ gcloudsdk_desired_state }}"

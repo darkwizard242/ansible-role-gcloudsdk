@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   role_name: gcloudsdk
-  author: Ali Muhammad
+  author: darkwizard242
   description: Google Cloud SDK (cli) installation on Debian-based and EL-based systems.
   company: none
   license: MIT

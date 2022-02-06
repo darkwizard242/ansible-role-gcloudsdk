@@ -14,8 +14,8 @@ galaxy_info:
         - focal
     - name: Debian
       versions:
-        - buster
         - stretch
+        - buster
     - name: EL
       versions:
         - 7

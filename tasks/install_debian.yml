@@ -2,25 +2,25 @@
 # tasks file for gcloudsdk | Debian/Ubuntu Family
 
 - name: Debian/Ubuntu Family | Install python3-apt
-  apt:
+  ansible.builtin.apt:
     name: python3-apt
     state: present
     force_apt_get: yes
     update_cache: yes
 
 - name: Debian/Ubuntu Family | Installing {{ gcloudsdk_pre_reqs_debian }} for {{ gcloudsdk_app_name }}
-  apt:
+  ansible.builtin.apt:
     name: "{{ gcloudsdk_pre_reqs_debian }}"
     state: "{{ gcloudsdk_pre_reqs_debian_desired_state }}"
     force_apt_get: yes
 
 - name: Debian/Ubuntu Family | Add gpg signing key for {{ gcloudsdk_app_name }} .
-  apt_key:
+  ansible.builtin.apt_key:
     url: "{{ gcloudsdk_debian_gpg_key }}"
     state: present
 
 - name: Debian/Ubuntu Family | Adding repository {{ gcloudsdk_repo_debian }}
-  apt_repository:
+  ansible.builtin.apt_repository:
     repo: "{{ gcloudsdk_repo_debian }}"
     state: "{{ gcloudsdk_repo_desired_state }}"
     filename: "{{ gcloudsdk_repo_debian_filename }}"
@@ -28,7 +28,7 @@
     update_cache: yes
 
 - name: Debian/Ubuntu Family | Installing {{ gcloudsdk_app_name }}
-  apt:
+  ansible.builtin.apt:
     name: "{{ gcloudsdk_app_name }}"
     state: "{{ gcloudsdk_desired_state }}"
     force_apt_get: yes

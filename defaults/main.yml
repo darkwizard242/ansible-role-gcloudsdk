@@ -7,17 +7,17 @@ gcloudsdk_pre_reqs_debian:
   - lsb-release
   - gnupg
 gcloudsdk_pre_reqs_debian_desired_state: present
-gcloudsdk_app_name: google-cloud-sdk
+gcloudsdk_app_name: google-cloud-cli
 gcloudsdk_desired_state: present
 gcloudsdk_debian_gpg_key: https://packages.cloud.google.com/apt/doc/apt-key.gpg
 gcloudsdk_repo_debian: "deb https://packages.cloud.google.com/apt cloud-sdk main"
-gcloudsdk_repo_debian_filename: "{{ gcloudsdk_app_name }}"
+gcloudsdk_repo_debian_filename: google-cloud-sdk
 gcloudsdk_el_gpg_yum_key: https://packages.cloud.google.com/yum/doc/yum-key.gpg
 gcloudsdk_el_gpg_rpm_key: https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
 gcloudsdk_repo_el_name: google-cloud-sdk
 gcloudsdk_repo_el_description: Google Cloud SDK
 gcloudsdk_repo_el: https://packages.cloud.google.com/yum/repos/cloud-sdk-el7-x86_64
-gcloudsdk_repo_el_filename: "{{ gcloudsdk_app_name }}"
+gcloudsdk_repo_el_filename: google-cloud-sdk
 gcloudsdk_repo_el_repogpgcheck: yes
 gcloudsdk_repo_el_gpgcheck: yes
 gcloudsdk_repo_el_enabled: yes

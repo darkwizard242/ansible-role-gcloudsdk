@@ -6,7 +6,7 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
     os.environ['MOLECULE_INVENTORY_FILE']).get_hosts('all')
 
 
-PACKAGE = 'google-cloud-sdk'
+PACKAGE = 'google-cloud-cli'
 PACKAGE_BINARY = '/usr/bin/gcloud'
 DEBIAN_REPO_FILE = '/etc/apt/sources.list.d/google-cloud-sdk.list'
 EL_REPO_FILE = '/etc/yum.repos.d/google-cloud-sdk.repo'
